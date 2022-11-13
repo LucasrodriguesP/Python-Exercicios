@@ -1,0 +1,27 @@
+import math
+def calcula_porcentagem_sorteio(assinante,minutos_assistidos):
+  #transforma em hora
+    print(minutos_assistidos)
+    for y in range(len(minutos_assistidos)):
+      minutos_assistidos[y] = math.ceil(minutos_assistidos[y]/60)
+      
+    misto = list(zip(assinante,minutos_assistidos))
+    print(minutos_assistidos)
+    print(misto)
+    
+    horas_resolvidas = []
+    #verificacao de assinatura
+    for assinatura,minutos in misto:
+      print(assinatura,minutos)
+      if assinatura == True:
+        x = minutos*2
+        horas_resolvidas.append(x)
+      elif assinatura == False:
+        horas_resolvidas.append(minutos)
+    #"regra de 3 pra tirar a chance"    
+    soma = sum(horas_resolvidas)
+    print(horas_resolvidas)
+    for i in range(len(horas_resolvidas)):
+      horas_resolvidas[i]= round((horas_resolvidas[i]*100)/soma,0)
+    print(horas_resolvidas)
+    return(horas_resolvidas)
