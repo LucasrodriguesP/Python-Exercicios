@@ -1,0 +1,12 @@
+def retorna_menor_e_maior_valor_de_vendas(tickets):
+  arr = []
+  tam = len(tickets)
+  for x in range(tam):
+    for y in tickets[x]:
+      if (y == 0 or y < 20 or y > 500):
+        continue
+      arr.append(y)
+  arr.sort()
+  maior=len(arr)
+  print(arr[0],arr[maior-1])
+  return [arr[0],arr[maior-1]]
