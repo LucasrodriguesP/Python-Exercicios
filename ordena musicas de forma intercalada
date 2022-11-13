@@ -1,0 +1,21 @@
+import math
+def shuffle_musicas(pesos):
+  if len(pesos) <= 1:
+    return pesos
+  print(pesos)
+  final = []
+  b = pesos.copy()
+  b.sort()
+  pesos.sort(reverse = True)
+  print(b,pesos)
+  tam = (len(pesos)/2)
+  tam = math.ceil(tam)
+  for x in range(tam):
+    final.append(pesos[x])
+    final.append(b[x])
+  tam2 = len(final)
+  if tam2 > 5:
+    tam2 = tam2 - 1
+    final.pop(tam2)
+  print(final)
+  return(final)
