@@ -1,0 +1,27 @@
+def percorre_coluna(w,aux,arr):
+  aux2 = 0
+  for _ in range(10):
+      aux2 = aux2 + aux[w]
+      w = w + 10
+  if (aux2 >= 5):
+    arr.append(1)
+  else:
+    arr.append(0)
+    
+def calcula_numero_da_senha(senha):
+  print(senha)
+  aux = []
+  aux2 = 0
+  arr = []
+  for x in senha:
+    for z in x:
+      aux.append(int(z))
+  for b in range(10):
+    percorre_coluna(b,aux,arr) 
+
+  for _ in range(10):
+    arr[_] = str(arr[_])
+  arr = [''.join(arr)]
+  senhaFinal = int(arr[0],2)
+  print(senhaFinal)
+  return senhaFinal
