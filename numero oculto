@@ -1,0 +1,16 @@
+def checa_numero_escondido(numero,numero_oculto):
+    numero = str(numero)
+    numero_oculto = str(numero_oculto)
+    aux = 0
+    print(numero)
+    print(numero_oculto)
+    for absolutos_numero in numero:
+      for absolutos_ocult in numero_oculto:
+        if absolutos_numero == absolutos_ocult:
+          print(f"absoluto - {absolutos_numero} absolutos_ocult : {absolutos_ocult}")
+          aux = aux + 1
+    print("aux ",aux)            
+    if aux >= len(numero_oculto):
+      return True
+    else:
+      return False
