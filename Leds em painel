@@ -1,0 +1,5 @@
+def calcula_total_leds(altura,largura):
+  
+  if altura == 0 or  largura == 0:
+    return 0
+  return (altura + 1) * (largura + 1)
